@@ -1,6 +1,4 @@
-# sunburn
-## USE AT OWN RISK
-
+# USE AT OWN RISK
 ### How to apply the theme
 1. Open the sunlearn dashboard
 2. Click the 'Customize the page' button.
