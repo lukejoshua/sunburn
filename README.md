@@ -1,6 +1,6 @@
 # USE AT OWN RISK
 ### How to apply the theme
-1. Open the sunlearn dashboard
+1. Open the sunlearn dashboard.
 2. Click the 'Customize the page' button.
 3. Add a new block.
 4. Choose HTML block.
