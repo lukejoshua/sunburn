@@ -3,7 +3,6 @@
 const bgColor = "#111"
 const bannerTextColor = "#fff"
 const fgColor = "#0f0"
-
 const css = `
 /* make the header black */
  #page-my-index > header * {
@@ -13,7 +12,6 @@ const css = `
 .menu-action-text {
     color:${bannerTextColor};
 }
-
 /* borders on the main content + colours*/
  #page * {
     font-family: monospace;
@@ -29,13 +27,11 @@ const css = `
 #page .course-content {
 	border: 1px solid ${fgColor} !important;
 }
-
 /* show all the hidden modules */
  #myoverview_courses_view .hidden {
     display: block;
     visibility: visible;
 }
-
 /* hide everything. just all of it */
  .breadcrumb,
  .progress-chart-container,
@@ -48,13 +44,10 @@ const css = `
  #myoverview_courses_view .btn-group {
     display:none;
 }
-
 /* override the responsive sizing */
  .row-fluid .span9, #myoverview_courses_view .span6 {
     width: 100%;
 }
-
-
 /* change the customize button colours (didn't bother with hover styles) */
  input[type="submit"] {
     background-color: ${bgColor};
@@ -62,11 +55,9 @@ const css = `
     border-radius:6px;
     border: 1px solid ${fgColor};
 }
-
 .content {
 	padding:0;
 }
-
 /* replace the logo with text - this would be better with js methinks */
  .logo a {
     display:none;
@@ -78,7 +69,6 @@ const css = `
     font-family: monospace;
     font-weight:100;
 }
-
 /*
 background image courtesy of https://www.heropatterns.com/
 */
@@ -93,7 +83,6 @@ const style = document.createElement('style')
 style.type = 'text/css'
 style.appendChild(document.createTextNode(css))
 head.appendChild(style)
-
 document.querySelectorAll('.course-info-container a').forEach(el => {
     if (!el.innerHTML.includes('-')) {
         el.parentNode.removeChild(el)
@@ -102,14 +91,12 @@ document.querySelectorAll('.course-info-container a').forEach(el => {
     const parts = el.innerHTML.split('-')
     const code = parts[parts.length-1]
     const subject = parts[parts.length-2]
-
     const semesterDigit = Number(code.trim()[1])
     const semesterText = [
         '1st', '1st', '1st',
         '2nd', '2nd', '2nd',
         '1st & 2nd','1st & 2nd', '1st & 2nd'
     ][semesterDigit-1] //I don't know what to do if 0
-
     el.innerHTML = `${subject} ${code} <small>(${semesterText} semester)</small>`
     el.addEventListener('click', async e => {
         try {
